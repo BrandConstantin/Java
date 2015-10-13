@@ -15,19 +15,19 @@ public class Ejer19 {
     
     int digitos;
     
-    if (((numero > 10000) && (numero < 100000)) &&
+    if (((numero > 10000) && (numero < 100000)) ||
        ((numero < -10000) && (numero > -100000))){
       System.out.println("El numero tiene 5 digitos ");
-    } else if (((numero > 1000) && (numero < 10000)) && 
+    } else if (((numero > 1000) && (numero < 10000)) || 
               ((numero > -1000) && (numero < -10000))){
       System.out.println("El numero tiene 4 digitos ");
-    } else if (((numero > 100) && (numero < 1000)) && 
+    } else if (((numero > 100) && (numero < 1000)) || 
                ((numero > -100) && (numero < -1000))){
       System.out.println("El numero tiene 3 digitos ");
-    } else if (((numero > 10) && (numero < 100)) &&
+    } else if (((numero > 10) && (numero < 100)) ||
               ((numero > -10) && (numero < -100))){
       System.out.println("El numero tiene 2 digitos ");
-    } else if (((numero > 1) && (numero < 10)) &&
+    } else if (((numero > 1) && (numero < 10)) ||-
               ((numero > -1) && (numero < -10))){
       System.out.println("El numero tiene 1 digitos ");
     } else {
