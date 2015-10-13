@@ -1,36 +1,61 @@
 /**
- * Realiza un programa que resuelva una ecuación de segundo grado 
- * (del tipo ax 2 + bx + c = 0)
- * 
- * @author costy
+ *Ejercicio 9: Realiza un programa que resuelva una ecuación de segundo grado
+ *(del tipo ax 2 + bx + c = 0).
+ *
+ *@author costy
  */
-
+ 
 public class Ejer9 {
-  public static void main(String[] args) {   
-  
-    System.out.println("Resolver ecuación de segundo grado");
+  public static void main (String[] args){
+    System.out.print("Vamos a resolver una ecuación de segundo grado ");
+    System.out.println("(ax2 + bx + c = 0).");
     
-    System.out.println("Dime el a");
-    int a = Integer.parseInt(System.console().readLine());
+    System.out.print("Introduzca el valor de a: ");
+    double a = Double.parseDouble(System.console().readLine());
     
-    System.out.println("Dime el b");
-    int b = Integer.parseInt(System.console().readLine());
+    System.out.print("Introduzca el valor de b: ");
+    double b = Double.parseDouble(System.console().readLine());
     
-    System.out.println("Dime el c");
-    int c = Integer.parseInt(System.console().readLine());
+    System.out.print("Introduzca el valor de c: ");
+    double c = Double.parseDouble(System.console().readLine());
     
-    double resultado1;
-    double resultado2;
+    double resultadoPos = 0.0;
+    double resultadoNeg = 0.0;
     
-    if (a != 0 && a >0){ 
-    resultado1 = (-b) + Math.sqrt((b * b) - 4 * a * c) / 2 * a;
-    System.out.println("El resultado positivo de la ecuación de segundo grado" + 
-    " es: " + resultado1);
-    resultado2 = (-b) - Math.sqrt((b * b) - 4 * a * c) / 2 * a;
-    System.out.println("El resultado negativo de la ecuación de segundo grado" + 
-    " es: " + resultado2);
-  } else {
-    System.out.println("a no puede ser menor o igual a 0");
-  }
+    if (a != 0){
+      if (b != 0){
+        if (c != 0){
+          if (Math.pow(b,2)-(4*a*c) >= 0){
+            resultadoPos = (-b+(Math.sqrt(Math.pow(b,2)-(4*a*c))))/(2*a);
+            resultadoNeg = (-b-(Math.sqrt(Math.pow(b,2)-(4*a*c))))/(2*a);
+          }else{
+            System.out.print("Raíz cuadrada negativa.");
+          }
+        }else{
+          if ((-b/a) >= 0){
+            resultadoPos = Math.sqrt(-b/a);
+            resultadoNeg = -resultadoPos;
+          }else{
+            System.out.print("Raíz cuadrada negativa.");
+          }
+        }
+      }else{
+        if ((-c/a) >= 0){
+          resultadoPos = Math.sqrt(-c/a);
+          resultadoNeg = -resultadoPos;
+        }else{
+          System.out.print("Raíz cuadrada negativa.");
+        }
+      }
+    }else{
+      System.out.print("Ecuación sin solución real.");
+    }
+    
+    if (!((resultadoPos > -0.00000001) && (resultadoPos < 0.00000001))){
+      if (!((resultadoNeg > -0.0000001) && (resultadoNeg < 0.00000001))){
+      System.out.printf("Resultado 1: %.2f\n", resultadoPos);
+      System.out.printf("Resultado 2: %.2f", resultadoNeg);
+      }
+    }
   }
 }

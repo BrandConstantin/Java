@@ -18,15 +18,15 @@ public class Ejer8 {
     
     System.out.println("La media obtenida es: " + notaFinal);
     
-    if (notaFinal == 0 && notaFinal <=5){
+    if (notaFinal >= 0 && notaFinal < 5){
       System.out.println("Esto es un insuficiente!");
-    } else if (notaFinal >5 && notaFinal <=6){
+    } else if (notaFinal >= 5 && notaFinal < 6){
       System.out.println("Esto es un suficiente!");
-    } else if (notaFinal >6 && notaFinal <=7){
+    } else if (notaFinal >= 6 && notaFinal < 7){
       System.out.println("Esto es un bien!");
-    } else if (notaFinal >7 && notaFinal <=9){
+    } else if (notaFinal >= 7 && notaFinal < 9){
       System.out.println("Esto es un notable!");
-    } else if (notaFinal >9 && notaFinal ==10){
+    } else {
       System.out.println("Esto es un sobresaliente!");
     }
   }
