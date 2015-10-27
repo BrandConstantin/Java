@@ -1,8 +1,6 @@
 /*
  * Estructura secuencial
- */
-
-/**
+ *
  *
  * @author costy
  */

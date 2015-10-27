@@ -1,5 +1,4 @@
 /*
- * Ejemplo de tipo enumerado
  *
  * @author costy
  */

@@ -1,8 +1,6 @@
 /*
  * Ejemplo de sentencia condicional
- */
-
-/**
+ *
  *
  * @author costy
  */
