@@ -1,12 +1,11 @@
 /**
- * Realiza un programa que pinte una pirámide por pantalla. La altura se debe
- * pedir por teclado. El carácter con el que se pinta la pirámide también se
- * debe pedir por teclado.
+ * Igual que el ejercicio anterior pero esta vez se debe pintar una pirámide 
+ * hueca.
  * 
  * @author costy
  */
 
-public class ejer19 {
+public class ejer20 {
   public static void main(String[] args) {   
     
     System.out.println("Introduce la altura:");
@@ -14,21 +13,22 @@ public class ejer19 {
     System.out.println("Introduce el simbolo con cual quieres dibujar:");
     String simbolo = System.console().readLine();
     
-    //int filaSimbolo;
     int espacio;
     
-    if (espacio == altura - 1){
+    if (espacio = altura - 1){
       
-      while (espacio <= altura) {
+      while (simbolo < altura) {
         for (int a = 0; a < espacio; a++){
           System.out.print("  ");
         }
-      for (int c = 0; c <= (altura * 2); c++){
+      for (int c = 0; c <= (simbolo * 2); c++){
           System.out.println(simbolo);
       }
-        espacio++;
+        simbolo++;
         espacio--;
+        espacio = espacio +2;
+        System.println();
       }
-    }        System.println(espacio);
+    }
   }
 }
