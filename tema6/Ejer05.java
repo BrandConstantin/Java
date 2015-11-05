@@ -27,6 +27,6 @@ public class Ejer05 {
       }
     } 
     System.out.println("\nLa media es " + (suma/50) + "\nEl numero minimo es " + 
-                  min + "\nEl numero maximo es" +  max); 
+                  min + "\nEl numero maximo es " +  max); 
   }
 }
