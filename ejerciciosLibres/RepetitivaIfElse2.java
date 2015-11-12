@@ -13,47 +13,42 @@ import java.util.Scanner;
 public class RepetitivaIfElse2 {
     public static void main(String[] args){
         
-        Scanner tecla = new Scanner(System.in);
-        int conta;
-        int num;
-        int mediaNegativ;
-        int mediaTotal; 
-        int numPositiv = 0; 
-        int numNegativ = 0;
-        int numCero = 0;
-        int sumTotal = 0;
-        int sumPositiv = 0; 
-        int sumNegativ = 0;
-        float mediaPositiv = 0;
+        Scanner teclado = new Scanner(System.in);
+        final float tarifaNormal = 7.5f; 
+        String nombreEmpleado = "";
+        int horas = 0;
+        double sueldoBruto;
+        double sueldoNeto;
+        double impuesto;
         
-        for (conta = 1; conta <= 10; conta++){        
-        System.out.println("Nº " + conta + " :");
-        num = tecla.nextInt();
+        System.out.println("Escribe nombre del trabajador:");
+        nombreEmpleado = teclado.nextLine();
         
-        sumTotal += num;
+        do{
+            System.out.println("Introduce el numero de horas trabajadas:");  
+            horas = teclado.nextInt();
+        } while (horas < 0);
         
-        if (num < 0){
-            numNegativ++;
-            sumNegativ += num;
+        if (horas < 40){
+            sueldoBruto = horas + tarifaNormal;
         } else {
-            if (num == 0){
-                numCero++;
-          } else {
-            numPositiv++;
-            sumPositiv += num;
-            }
-          }
+            sueldoBruto = 40 * tarifaNormal + (horas - 40) * tarifaNormal *1.5f;
         }
-        mediaPositiv = sumPositiv / numPositiv;
-        mediaNegativ = sumNegativ / numNegativ;
-        mediaTotal = sumTotal / 10;
+        if (sueldoBruto <= 150){
+            impuesto = 0;
+        } else {
+            if (sueldoBruto <= 300){
+                impuesto = 0.15d *(sueldoBruto - 150);
+            } else {
+                impuesto = 150 *0.15d +(sueldoBruto - 300) * 0.35d;
+            }
+        }
         
-        System.out.println("Los numeros negativos son " + numNegativ);
-        System.out.println("Los numeros positivos son " + numPositiv);
-        System.out.println("Los numeros negativos son " + numNegativ);
-        System.out.println("Los numeros sceros son " + numCero);
-        System.out.printf("Las medias son: para numeros positivos %d " + 
-                "para numeros negativos %d y numeros ceors %d", numPositiv, numNegativ,
-                numCero);
+        sueldoNeto = sueldoBruto - impuesto;
+        
+        System.out.println("Li quidación semanal para  " + nombreEmpleado + 
+            " con " + horas + " horas trabajadas, es de  " + sueldoBruto + 
+                " euros");
+        System.out.println("El salario neto es de " + sueldoNeto + " euros");
     }
 }

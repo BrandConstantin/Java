@@ -5,12 +5,16 @@
  * 
  * @author costy
  */
+import java.util.Scanner;
 
 public class ejer16 {
   public static void main(String[] args) {   
     
+    Scanner teclado = new Scanner(System.in);
+      
     System.out.println("Escribe un numero y te digo si es primo o no");
-    int num = Integer.parseInt(System.console().readLine());
+    int num;
+    num = teclado.nextInt();
     
     int contador = 2;
     boolean primo = true;

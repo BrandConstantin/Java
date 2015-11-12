@@ -6,6 +6,7 @@
  * 
  * @author costy
  */
+import java.util.Scanner;
 
 public class ejer10 {
   public static void main(String[] args) {   
@@ -18,7 +19,8 @@ public class ejer10 {
     do {
       System.out.println("Introduce los numeros positivos que quieres hacer la " +
         " media");
-      num = Double.parseDouble(System.console().readLine()); 
+    Scanner teclado = new Scanner(System.in);
+    num = teclado.nextInt();
       contador++;
       suma += num;
     } 

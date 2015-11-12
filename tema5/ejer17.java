@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /**
  * Realiza un programa que sume los 100 números siguientes a un número entero 
  * positivo introducido por teclado. Se debe comprobar que el dato introducido 
@@ -5,12 +8,16 @@
  * 
  * @author costy
  */
+import java.util.Scanner;
 
 public class ejer17 {
   public static void main(String[] args) {   
     
+    Scanner teclado = new Scanner(System.in);
+    
     System.out.println("Escribe un numero positivo y te sumo los 100 siguentes");
-    int num = Integer.parseInt(System.console().readLine());
+    int num;
+    num = teclado.nextInt();
     
     int suma = 0;
     

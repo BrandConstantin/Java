@@ -44,16 +44,16 @@ public class Ejer02 {
     
       switch(palos) {
         case 0:
-          System.out.println(" de PICA");
+          System.out.println(" de ♥");
           break;
         case 1:
-          System.out.println(" de CORAZON");
+          System.out.println(" de ♣");
           break;
         case 2:
-          System.out.println(" de DIAMANTE");
+          System.out.println(" de ♦");
           break;
         case 3:
-          System.out.println(" de TREBOL");
+          System.out.println(" de ♠");
           break;
     }
   }

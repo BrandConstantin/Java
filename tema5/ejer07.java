@@ -9,6 +9,7 @@
  * 
  * @author costy
  */
+import java.util.Scanner;
 
 public class ejer07 {
   public static void main(String[] args) {   
@@ -18,11 +19,17 @@ public class ejer07 {
     
     System.out.println("Se acceptan solo numeros de 1 a 15");
     
+    int primNum;
     int intentos = 0;
-    int primNum = Integer.parseInt(System.console().readLine());
-    int segNum = Integer.parseInt(System.console().readLine());
-    int tercerNum = Integer.parseInt(System.console().readLine());
-    int cuartoNum = Integer.parseInt(System.console().readLine());
+    int segNum;
+    int tercerNum;
+    int cuartoNum;
+    
+    Scanner teclado = new Scanner(System.in);
+    primNum = teclado.nextInt();
+    segNum = teclado.nextInt();
+    tercerNum = teclado.nextInt();
+    cuartoNum = teclado.nextInt();
     
     do {
       if ((primNum == 8) && (segNum == 13) && 

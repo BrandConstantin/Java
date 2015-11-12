@@ -17,5 +17,10 @@ public class Ejer14 {
       } else {
        System.out.println("El numero es impar");
       }
+      if (num % 5 ==0){
+        System.out.println("El numero es divisible a 5");
+      } else {
+       System.out.println("El numero no es divisible a 5");
+      }
   }
 }

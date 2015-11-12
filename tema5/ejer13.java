@@ -4,6 +4,7 @@
  * 
  * @author costy
  */
+import java.util.Scanner;
 
 public class ejer13 {
   public static void main(String[] args) {   
@@ -17,7 +18,9 @@ public class ejer13 {
     
     do {
       System.out.println("Escribe un numero");
-      int num = Integer.parseInt(System.console().readLine());
+      int num;
+      Scanner teclado = new Scanner(System.in);
+      num = teclado.nextInt();
 
       if (num < 0){
         negativos++;

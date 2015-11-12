@@ -8,7 +8,7 @@
 public class Ejer01 {
   public static void main(String[] args) {   
     
-    int totalDados = 0;;
+    int totalDados = 0;
 
     int dado1 = (int)(Math.random()*6) + 1;    
     System.out.println("La primera tirada de datos es: " + dado1);

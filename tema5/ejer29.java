@@ -12,17 +12,22 @@ public class ejer29 {
 public static void main(String[] args) {
 Scanner teclado = new Scanner(System.in);
     
-    int numIntrod;
-    int divisor;
+    int cuenta;
+    int suma;
+    
+    System.out.println("Introduce un numro que sea grande");
+    int numIntrod = teclado.nextInt();  
+
+    System.out.println("Introduce un divisor que sea mas pequeño que el " + 
+                 " anterior");
+    int divisor = teclado.nextInt(); 
     
     do {
-        System.out.println("Introduce un numro");
-        numIntrod = teclado.nextInt();  
-        
-        System.out.println("Introduce un divisor");
-        divisor = teclado.nextInt();  
-        
-        
+        for (int i = 1; i < numIntrod; i++){
+            if((i % divisor) != 0){
+                System.out.print(i + "   ");
+            }
+        }
     } while (numIntrod < 0);
   }
 }

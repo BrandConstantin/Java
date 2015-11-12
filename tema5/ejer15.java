@@ -7,14 +7,20 @@
  * 
  * @author costy
  */
+import java.util.Scanner;
 
 public class ejer15 {
   public static void main(String[] args) {   
     
+    Scanner teclado = new Scanner(System.in);
+      
     System.out.println("Escribe la base");
-    int base = Integer.parseInt(System.console().readLine());
+    int base;
+    base = teclado.nextInt();
+    
     System.out.println("Escribe el exponente");
-    int exponente = Integer.parseInt(System.console().readLine());
+    int exponente;
+    exponente = teclado.nextInt();
 
     double potencia;
     int expo;  
@@ -25,7 +31,7 @@ public class ejer15 {
       expo = e;
       
       for (int i = 0; i < expo; i++){
-          potencia = potencia * base; 
+          potencia *= base; 
       }
       System.out.println(base + "^" + e + "=" + potencia);
 

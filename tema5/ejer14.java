@@ -4,24 +4,25 @@
  * 
  * @author costy
  */
+import java.util.Scanner;
 
 public class ejer14 {
   public static void main(String[] args) {   
     
     System.out.println("Escribe el base (numero entero positivo)");
-    int base = Integer.parseInt(System.console().readLine());
+    int base;
+    Scanner teclado = new Scanner(System.in);
+    base = teclado.nextInt();
+    
     System.out.println("Escribe la exponente (numero entero positivo)");
-    int expo = Integer.parseInt(System.console().readLine());
+    int expo;
+    expo = teclado.nextInt();
     
-    int potencia;
+    int potencia = 1;
     
-    if (expo >= 0){
-      potencia = 1; 
-      
-      for (int i = 0; i < expo; i++){
-          potencia *= base; 
-      }
-    }
-      System.out.println(base + " ^ " + expo + " = " + potencia);
+        for (int i = 1; i <= expo; i++)
+            potencia *= base;
+
+    System.out.println(base + " ^ " + expo + " = " + potencia);
   }
 }

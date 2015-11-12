@@ -4,31 +4,45 @@
  * 
  * @author costy
  */
+import java.util.Scanner;
 
 public class ejer20 {
   public static void main(String[] args) {   
     
+    Scanner teclado = new Scanner(System.in);
+    
     System.out.println("Introduce la altura:");
-    int altura = Integer.parseInt(System.console().readLine());
+    int alturaMetida = teclado.nextInt();
+    
     System.out.println("Introduce el simbolo con cual quieres dibujar:");
-    String simbolo = System.console().readLine();
+    String fila = teclado.next();
     
-    int espacio;
-    
-    if (espacio = altura - 1){
+    int espacio = (alturaMetida - 1);
+    int altura = 1;
+    int alturaInterna = 0;
+    int b = 0;
       
-      while (simbolo < altura) {
-        for (int a = 0; a < espacio; a++){
-          System.out.print("  ");
+    while (altura < alturaMetida) {
+        for (int a = 1; a <= espacio; a++){
+            System.out.print("  ");
         }
-      for (int c = 0; c <= (simbolo * 2); c++){
-          System.out.println(simbolo);
-      }
-        simbolo++;
+        
+        System.out.println(fila);
+        for (int a = 1; a <= alturaInterna; a++){
+        System.out.println(" ");
+        }
+        
+        if (altura > 1){
+            System.out.println(fila);
+        }
+        
+        System.out.println();
+        altura++;
         espacio--;
-        espacio = espacio +2;
-        System.println();
-      }
+        alturaInterna += 2;
+    } 
+    for (b = 1; b < (altura*2); b++) {
+    System.out.print(fila);
     }
   }
 }
