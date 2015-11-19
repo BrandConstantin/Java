@@ -24,8 +24,8 @@ public class Array08 {
     String morado = "\033[35m";
     String blanco = "\033[37m";
     
-    for (int i = 0; i <= 12; i++){
-        System.out.print("Introduce la temperatura del mes:" + mes[i]);
+    for (int i = 0; i < 12; i++){
+        System.out.print("Introduce la temperatura del mes: " + mes[i]+ " ");
         temp[i] = Integer.parseInt(num.nextLine());
     }
     
@@ -39,5 +39,6 @@ public class Array08 {
       }
       System.out.println(naranja + " " + temp[i] + "ºC" + blanco);
     }
+    System.out.println("===================================================");
   }
 }
