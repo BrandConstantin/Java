@@ -8,60 +8,53 @@
  * 
  *@Costy 
  */
- 
-import java.util.Scanner;
 
 public class Array10 {
   public static void main(String[] args) {
     
-    Scanner num = new Scanner(System.in);
-    
     int[] numero = new int [20];
+    int[] pares = new int [20];
+    int[] impares = new int [20];
     String verde = "\033[32m";
     String naranja = "\033[33m";
-    //String azul = "\033[34m";
-    //String morado = "\033[35m";
     String blanco = "\033[37m";
     int contaImpar = 0;
     int contaPar = 0;
+    int i;
     
     //muestra los numeros aleatorios
-    for (int i = 0; i < numero.length; i++) {
+    for (i = 0; i < numero.length; i++) {
       numero[i] = (int)(Math.random() * 101);
       System.out.print(verde + numero[i]);
 
     //diferenciar pares de impares, contarlos y almacenarlos en un array
       if ((numero[i] % 2) == 0){
         System.out.println(blanco + "\tPAR");
-        contaPar++;
+        pares[contaPar++] = numero[i];
       } else{
         System.out.println(naranja + "\tIMPAR");
-        contaImpar++;
+        impares[contaImpar++] = numero[i];
       }
-    
-      //System.out.println("===================================================");
+    }
       
-      int[] pares = new int [20];
-      int[] impares = new int [20];
-      for (int a = 0; a < (pares.length - 1); a++){
-        numero[a] = pares[a];
+      //Meter los pares primeros y los impares segundos en una lista y mostrarlos
+      
+          
+      for (i = 0; i < pares.length; i++){
+        numero[i] = pares[i];
       }
-
-    
-    
-      /*		for (int i=0; i<pares.length;i++){
-			numeros[i]=pares[i];
-		}
-		indiceImpares=0;
+      
+      int aux = 0;
+      
+      for (i = contaPar; i < numero.length; i++){
+        numero[i] = impares[aux];
+        aux++;
+      }
 		
-		for (int i=indicePares;i<numeros.length;i++){
-			numeros[i]=impares[indiceImpares];
-			indiceImpares++;
-		}
-		System.out.print("Array cambiado: ");
-		for (int i:numeros){
-			
-			System.out.print(i+" ");*/
-    } 
+      System.out.println("===================================================");
+      System.out.print("Array cambiado: ");
+      for (i = 0; i < 20; i++ ){
+        System.out.print(numero[i]+" ");
+      } 
   }
 }
