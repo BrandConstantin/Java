@@ -40,11 +40,11 @@ public class Array12 {
 
     //Mostras el indice y sus numeros guardados en el array
     for (i = 0; i < numero.length; i++){
-      System.out.print(i + "\t");
+      System.out.print(verde + i + "\t");
     }
     System.out.println("\n-----------------------------------------------------------------------\n");
     for (i = 0; i < numero.length; i++){
-      System.out.print(numero[i] + "\t");
+      System.out.print(azul + numero[i] + "\t");
     }
     
     do {        
@@ -57,7 +57,7 @@ public class Array12 {
                 numCambiado[i] = numero[i];
             }
             
-            numCambiado[finala] = numero[inicial];
+            numCambiado[inicial] = numero[finala];
             
             for (i = finala + 1; i < 10; i++){
                 numCambiado[i] = numero[i - 1];
@@ -68,16 +68,18 @@ public class Array12 {
             for (i = 0; i < inicial; i++){
                 numCambiado[i + 1] = numero[i];
             }
+            
+            numCambiado[finala] = numCambiado[inicial];
         }
-    } while (inicial < finala);
+    } while (finala < inicial);
       
     //Mostras el indice y sus numeros guardados en el array cambiado
     for (i = 0; i < numero.length; i++){
-      System.out.print(i + "\t");
+      System.out.print(verde + i + "\t");
     }
     System.out.println("\n-----------------------------------------------------------------------\n");
     for (i = 0; i < numero.length; i++){
-      System.out.print(numCambiado[i] + "\t");
+      System.out.print(azul + numCambiado[i] + "\t");
     }
   }
 }
