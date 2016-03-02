@@ -1,0 +1,59 @@
+  h1{
+    text-style: underline ;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    }
+  h3{
+    color: black;
+    text-align: center;
+    }
+  p{
+    font-size: 15px;
+    color:black;
+    text-align: center;
+  }
+ .especial{
+      text-align: left;
+  }
+  i {
+      text-align: center;
+      color: black;
+  }
+  ul{
+   margin-left: 40px; 
+   list-style-type: upper-alpha;
+   }
+  a:hover{
+    color: brown;
+    background-color:transparent;
+    text-decoration: underline;
+    }
+  a:visited{
+    color: blue;
+    background-color:transparent;
+    text-decoration: underline;
+    }
+  body{
+    background-color:#89FF45;
+  }
+  table tr td {
+      border: solid 1px white;
+      text-align: center;
+      width: 200px;
+      height: 100px;
+  }
+  table{
+      margin: 0 auto;
+  }
+  li{
+      list-style: none;
+  }
+  input[type=radio]{
+      color:black;
+      text-align: center;
+  }
+  div{
+      text-align: center;
+      margin: 0px auto;
+  }
