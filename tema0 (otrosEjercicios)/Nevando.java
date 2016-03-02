@@ -11,7 +11,7 @@ public class Nevando{
         int i;
         int l;
         
-        int nieve = ((int)(Math.random() * 5000));
+        int nieve = ((int)(Math.random() * 50000));
         for (i = 0; i <= nieve; i++){
            System.out.print("*");   
         int  espacio = ((int)(Math.random() * 10));

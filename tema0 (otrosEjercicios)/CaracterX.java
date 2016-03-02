@@ -31,6 +31,8 @@ public class CaracterX {
                 System.out.print("*");
                 for (l = j; l < (i / 2); l++){
                 }
+                
+                
                 for (a = l; a < l / 2; a++){
                     System.out.print("*");
                 }
