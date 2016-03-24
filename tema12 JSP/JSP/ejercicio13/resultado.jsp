@@ -22,7 +22,7 @@
                                 "será algo sin importancia. No bajes la guardia.");
          } else {
         out.println("Tu pareja tiene todos los ingredientes para estar viviendo un romance con otra persona." + 
-                            " Te aconsejamos que indagues un poco más y averigües que es lo que está pasando por su cabez");
+                            " Te aconsejamos que indagues un poco más y averigües que es lo que está pasando por su cabeza");
          }
         %>
     </body>

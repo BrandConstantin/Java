@@ -9,11 +9,9 @@
         <h1>Puntuación:</h1>
     <%
     int punto = 0;
-    
-    int resultado = 0;
+
     for (int x = 1; x < 11; x++){
         punto += Integer.parseInt(request.getParameter("p" + x)); 
-        resultado = punto + resultado;
     }
 
     out.print(punto);

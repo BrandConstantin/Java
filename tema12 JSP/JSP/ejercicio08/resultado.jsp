@@ -9,16 +9,29 @@
     </head>
 <body>
     <h1>Tabla Multiplicar</h1>
+    <!--con lista-->
     <ul>
         <% int numero = Integer.parseInt(request.getParameter("numero")); %>
         <%
         for(int i = 0; i <= 10; i++) {
-        out.print("<li>" + i + "\t * ");
+        out.print("<li>" + i + " \t * ");
         out.print(numero + " \t = ");
         out.print("\t " + i * numero);
         out.print("</li>");
         }
         %>
     </ul>
+    <!--con tabla-->
+    <table>
+        <% numero = Integer.parseInt(request.getParameter("numero")); %>
+        <%
+        for(int i = 0; i <= 10; i++) {
+        out.print("<tr><td>" + i + " \t * ");
+        out.print(numero + " \t = ");
+        out.print("\t " + i * numero);
+        out.print("</td</tr>");
+        }
+        %>
+    </table>
 </body>
 </html>

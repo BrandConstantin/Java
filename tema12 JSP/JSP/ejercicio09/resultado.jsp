@@ -14,7 +14,7 @@
         int numIntrod = Integer.parseInt(request.getParameter("numero"));
         
         int numero = 1;
-        int a = 0;
+        int a;
         int espacio = numIntrod - 1;
 
         while(numero <= numIntrod){

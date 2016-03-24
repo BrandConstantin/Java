@@ -18,7 +18,7 @@
             </td>
             <td><p>€</p></td>
         </tr>
-        <tr><td colspan="3"><input type="submit" name="Enviar"></td></tr>
+        <tr><td colspan="3"><input type="submit" value="Enviar"></td></tr>
     </table>
 </body>
 </html>
