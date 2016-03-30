@@ -1,6 +1,5 @@
 /*
- * Leer un numeros y contarlos
- * Leer numeros hasta que se introduce un 0
+ * Adivinar número
  */
 package tema.pkg0.b.condicionales.y.bucles;
 import java.util.Scanner;
