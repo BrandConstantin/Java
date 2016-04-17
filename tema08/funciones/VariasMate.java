@@ -209,18 +209,123 @@ public class VariasMate {
      * 
      */
     public static int quitaPorDelante(long numIntrod, int digitos){
-        int numReves = volteado((int)numIntrod);
+        /*int numReves = volteado((int)numIntrod);
         numReves = numReves / 10;
-        numIntrod = volteado((int)numReves);
+        numIntrod = volteado((int)numReves);*/
         
         int divisor = 1;
-        while(digitos > 0){
+        int contador = digitos((int)numIntrod);
+        
+        while(contador > 1){
             divisor = divisor * 10;
+            contador--;
+        }
+        
+        while(digitos > 0){
+            numIntrod = numIntrod % divisor;
+            divisor = divisor / 10;
             digitos--;
         }
-
-        
-
         return (int)numIntrod;
+    }
+
+                    
+    /*
+     * Añade un digito a un número introducido, por detras
+     *
+     *
+     * @author BrinCo
+     * @param  se da un número luego se añade un digito
+     * @ return numIntrod
+     * 
+     */
+    public static int pegaPorDetras(long numIntrod, int digitos){
+        
+        numIntrod = (numIntrod * 10) + digitos;
+        return (int)numIntrod;
+    }
+    /*
+     * Añade un digito a un número introducido, por detras
+     *
+     *
+     * @author BrinCo
+     * @param  se da un número luego se añade un digito
+     * @ return numIntrod
+     * 
+     */
+    public static int pegaPorDelante(long numIntrod, int digitos){
+        
+        long nuevoNumero = volteado((int)numIntrod);
+        nuevoNumero = (nuevoNumero * 10) + digitos;
+        numIntrod = volteado((int)nuevoNumero);
+        
+        return (int)numIntrod;
+    }
+    /*
+     * Toma como parámetros las posiciones inicial y final dentro de un número y 
+     * devuelve el trozo correspondiente.
+     *
+     *
+     * @author BrinCo
+     * @param  se dan dos numeros y muestra el trozo que hay entre ellos
+     * @ return numIntrod
+     * 
+     */
+    public static int trozoDeNumero(long numIntrod, int numInicial, int numFinal){
+        
+        numFinal = digitos((int)numIntrod) - numFinal;
+        numIntrod = quitaPorDelante((long)numIntrod, (numInicial - 1));
+        numIntrod = quitaPorDetras((long)numIntrod, numFinal);
+        
+        /*for(int i = 0; i < numInicial - 1; i++){
+            numIntrod = quitaPorDelante(numIntrod, 1);
+        }
+        
+        for(int i = 0; i < numFinal; i++){
+            numIntrod = quitaPorDetras(numIntrod, 1);
+        }
+        */
+        return (int)numIntrod;
+    }
+    /*
+     * Pega dos números para formar uno.
+     *
+     *
+     * @author BrinCo
+     * @param  juntar dos números
+     * @ return num
+     * 
+     */
+    public static int juntarNumeros(long numInicial, long numFinal){
+        
+        int contador = 1;
+        int contarDigitos = digitos((int)numFinal);
+        
+        while(contarDigitos > 0){
+            contador *= 10;
+            contarDigitos--;
+        }
+        
+        numInicial = numInicial * contador;
+        long num = numInicial + numFinal;
+        
+        return (int)num;
+    }
+    /*
+     * Muestra los números primos que hay entre 1 y 1000
+     *
+     *
+     * @author BrinCo
+     * @param  juntar dos números
+     * @ return num
+     * 
+     */
+    public static void numPrimos(){
+
+        for (int b = 1; b <= 1000; b++){
+            if (esPrimo(b)){
+                System.out.print("|" + b + "");
+            }
+        }
     }
 }
