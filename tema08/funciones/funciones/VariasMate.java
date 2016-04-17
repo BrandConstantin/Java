@@ -409,23 +409,89 @@ public class VariasMate {
      * @ return num
      * 
      */
-    public static long transformNum(long num){
+    public static long binario_Octal(long num){
         
-        if(num == 0){
-            return 0;
+        long octal = 0;
+        
+        while(num > 0){
+            octal = octal * 10 + (binario_Decimal(num % 1000));
+            num = num / 1000;
         }
         
-        int decimal = 1; 
+        octal = pegaPorDetras(octal, 1);
+        octal = volteado((int)octal);
+        octal = quitaPorDetras(octal, 1);
+        octal = quitaPorDelante(octal, 1);
         
-        while(num > 1){
-            decimal = pegaPorDetras(decimal, (int)num % 2);
-            num = num / 2; 
+        return octal;
+    }
+    /*
+     * Une y amplía los dos programas anteriores de tal forma que se permita  
+     * convertir un número entre cualquiera de las siguientes bases: decimal, 
+     * binario, hexadecimal y octal.
+     *
+     *
+     * @author BrinCo
+     * @param  transformar numero
+     * @ return num
+     * 
+     */
+    public static String binario_Hexadecimal(long binario){
+        
+        String hexadecimal = "";
+        String digitHexa = "0123456789ABCDEF";
+        
+        while(binario > 0){
+            hexadecimal = digitHexa.charAt((int)binario_Decimal(binario % 10000)) + hexadecimal;
+            binario /= 10000;
         }
         
-        decimal = pegaPorDetras(decimal, 1);
-        decimal = volteado(decimal);
-        decimal = quitaPorDetras((long)decimal, 1);
+        return hexadecimal; //return hexadecimal
+    }
+    /*
+     * Une y amplía los dos programas anteriores de tal forma que se permita  
+     * convertir un número entre cualquiera de las siguientes bases: decimal, 
+     * binario, hexadecimal y octal.
+     *
+     *
+     * @author BrinCo
+     * @param  transformar numero
+     * @ return num
+     * 
+     */
+    public static long octal_Binario(long octal){
         
-        return decimal;
+        long binario = 0;
+        
+        for(int i = 0; i < digitos((int)octal); i++){
+            binario = binario * 1000 + decimal_Binario(posicionDigito(octal, i));
+        }
+        return binario; 
+    }
+    /*
+     * Une y amplía los dos programas anteriores de tal forma que se permita  
+     * convertir un número entre cualquiera de las siguientes bases: decimal, 
+     * binario, hexadecimal y octal.
+     *
+     *
+     * @author BrinCo
+     * @param  transformar numero
+     * @ return num
+     * 
+     */
+    public static long hexadecimal_Binario(String hexadecimal){
+        
+        String digitHexa = "0123456789ABCDEF";
+        long binario = 0;
+        
+        for(int i = 0; i < hexadecimal.length(); i++){
+            binario = binario * 10000 + decimal_Binario(digitHexa.indexOf(hexadecimal.charAt(i)));
+        }
+
+        return binario; //return hexadecimal
+    }
+
+    public static long hexadecimal_Binario(long num) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
