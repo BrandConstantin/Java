@@ -28,7 +28,7 @@ public class VariasMate {
             x /= 10;
         }
         
-        //cmporbar
+        //comprobar
         if(original == numInvertido){
             capicua = true;
         }
@@ -316,8 +316,8 @@ public class VariasMate {
      *
      *
      * @author BrinCo
-     * @param  juntar dos números
-     * @ return num
+     * @param  números primos
+     * @ return esPrimo
      * 
      */
     public static void numPrimos(){
@@ -327,5 +327,105 @@ public class VariasMate {
                 System.out.print("|" + b + "");
             }
         }
+    }
+    /*
+     * Muestra los números capicúa que hay entre 1 y 99999.
+     *
+     *
+     * @author BrinCo
+     * @param  números capicuas
+     * @ return esCapicua
+     * 
+     */
+    public static void numCapicuas(){
+        
+        int contador = 0;
+        
+        for (int b = 1; b <= 99999; b++){
+            if (esCapicua(b)){
+                System.out.print("|" + b + "");
+                contador++;
+                if(contador % 10 == 0){
+                    System.out.println();
+                }
+            }
+        }
+    }
+    /*
+     * Escribe un programa que pase de binario a decimal.
+     *
+     *
+     * @author BrinCo
+     * @param  transformar de binario a decimal
+     * @ return num
+     * 
+     */
+    public static long binario_Decimal(long num){
+        
+        int longitud = digitos((int)num);
+        long decimal = 0;
+        
+        for(int x = 0; x < longitud; x++){
+            decimal += potencia(2, x) * posicionDigito(num, longitud - x - 1);
+        }
+        return decimal;
+    }
+    /*
+     * Escribe un programa que pase de decimal a binario
+     *
+     *
+     * @author BrinCo
+     * @param  transformar de binario a decimal
+     * @ return num
+     * 
+     */
+    public static long decimal_Binario(long num){
+        
+        if(num == 0){
+            return 0;
+        }
+        
+        int decimal = 1; 
+        
+        while(num > 1){
+            decimal = pegaPorDetras(decimal, (int)num % 2);
+            num = num / 2; 
+        }
+        
+        decimal = pegaPorDetras(decimal, 1);
+        decimal = volteado(decimal);
+        decimal = quitaPorDetras((long)decimal, 1);
+        
+        return decimal;
+    }
+    /*
+     * Une y amplía los dos programas anteriores de tal forma que se permita  
+     * convertir un número entre cualquiera de las siguientes bases: decimal, 
+     * binario, hexadecimal y octal.
+     *
+     *
+     * @author BrinCo
+     * @param  transformar numero
+     * @ return num
+     * 
+     */
+    public static long transformNum(long num){
+        
+        if(num == 0){
+            return 0;
+        }
+        
+        int decimal = 1; 
+        
+        while(num > 1){
+            decimal = pegaPorDetras(decimal, (int)num % 2);
+            num = num / 2; 
+        }
+        
+        decimal = pegaPorDetras(decimal, 1);
+        decimal = volteado(decimal);
+        decimal = quitaPorDetras((long)decimal, 1);
+        
+        return decimal;
     }
 }
