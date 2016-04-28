@@ -3,7 +3,7 @@
 posible el ejemplo que se proporciona. Pruébalo primero para ver cómo
 funciona y luego intenta implementarlo tú mismo.
  */
-package poo;
+package discos;
 
 /**
  *
@@ -15,6 +15,14 @@ public class Discos {
     private String titulo;
     private String genero;
     private int duracion;
+    
+    public Discos(String codigo, String autor, String titulo, String genero, int duracion){
+        this.codigo = codigo;
+        this.autor = autor;
+        this.titulo = titulo;
+        this.genero = genero;
+        this.duracion = duracion;
+    }
 
     public String getCodigo() {
         return codigo;
@@ -56,6 +64,7 @@ public class Discos {
         this.duracion = duracion;
     }
     
+    @Override
     public String toString(){
         String cadena = "\n--------------------------------";
                 cadena += "\nCódigo: " + this.codigo;
