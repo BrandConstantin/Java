@@ -1,4 +1,4 @@
-package discos;
+package tema9;
 
 import java.util.Scanner;
 
@@ -85,7 +85,7 @@ public class Coleccion_Discos {
                     System.out.println("MODIFICAR DISCO");
                     System.out.println("-------------------------");
                     System.out.println("Cual es el código del dico a modificar?");
-                    int codigoIntrod = tecla.nextInt();
+                    codigoIntrod = tecla.nextLine();
                     
                     i = -1;
                     do{
@@ -94,45 +94,58 @@ public class Coleccion_Discos {
                     
                     System.out.println("Introduce los nuevos datos del disco");
                     System.out.println("-----------------------------------------");
-                    
+                   
                     System.out.println("Código: " + album[i].getCodigo());
-                    System.out.println("Nuevo código: ");
-                    codigoIntrod = tecla.nextInt();
+                    System.out.print("Nuevo código: ");
+                    codigoIntrod = tecla.nextLine();
                     if (!codigoIntrod.equals(" ")) {
                         album[i].setCodigo(codigoIntrod);
                     }
                     System.out.println("Autor: " + album[i].getAutor());
-                    System.out.println("Nuevo autor: ");
+                    System.out.print("Nuevo autor: ");
                     autorIntrod = tecla.nextLine();
                     if (!autorIntrod.equals("")) {
                         album[i].setAutor(autorIntrod);
                     }
                     System.out.println("Titulo: " + album[i].getTitulo());
-                    System.out.println("Nuevo titulo: ");
+                    System.out.print("Nuevo titulo: ");
                     tituloIntrod = tecla.nextLine();
                     if (!tituloIntrod.equals("")) {
                         album[i].setTitulo(tituloIntrod);
                     }
                     System.out.println("Genero: " + album[i].getGenero());
-                    System.out.println("Nuevo género: ");
+                    System.out.print("Nuevo género: ");
                     generoIntrod = tecla.nextLine();
                     if (!generoIntrod.equals("")) {
                         album[i].setGenero(generoIntrod);
                     }
                     System.out.println("Duración: " + album[i].getDuracion());
-                    System.out.println("Duración: ");
+                    System.out.print("Duración: ");
                     duracionIntrodString = tecla.nextLine();
                     if (!duracionIntrodString.equals("")) {
                         album[i].setDuracion(Integer.parseInt(duracionIntrodString));
                     }
                     
                     break;
-                /*case 4:
+                case 4:
+                    System.out.println("BORRAR DATOS DISCO");
+                    System.out.println("-------------------------------");
                     
+                    System.out.println("Introduzca el código del disco que quieres borrar");
+                    codigoIntrod = tecla.nextLine();
+                    
+                    i = -1;
+                    do{
+                        i++;
+                    }while(!((album[i].getCodigo()).equals(codigoIntrod)));
+                    album[i].setCodigo("LIBRE");
+                    album[i].setAutor("Sin Autor");
+                    album[i].setTitulo("Sin Titulo");
+                    album[i].setGenero("Sin Genero");
+                    album[i].setDuracion(0);
+                    System.out.println("Album borrado");
                     break;
-                case 5: 
-                    
-                    break;*/
+                default:
             }
         }while(opcion != 5);
     }

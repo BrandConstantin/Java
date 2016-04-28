@@ -3,7 +3,7 @@
 posible el ejemplo que se proporciona. Pruébalo primero para ver cómo
 funciona y luego intenta implementarlo tú mismo.
  */
-package discos;
+package tema9;
 
 /**
  *
