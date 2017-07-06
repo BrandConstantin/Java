@@ -3,15 +3,15 @@ package proyecto_seccion_5;
 public class Product {
 	private static int numElementos;
 	private String nombreProd;
-	private int unidadesExistentes;
+	private int unidadProd;
 	private double precioUnidad;
 	
 	//constructores
-	public Product(int nu, String no, int u, double p) {
-		numElementos = nu;
-		nombreProd = no;
-		unidadesExistentes = u;
-		precioUnidad = p;
+	public Product(int numElementos, String nombreProd, int unidadProd, double precioUnidad) {
+		numElementos = numElementos;
+		nombreProd = nombreProd;
+		unidadProd = unidadProd;
+		precioUnidad = precioUnidad;
 	}	
 	
 	//getters
@@ -23,8 +23,8 @@ public class Product {
 		return nombreProd;
 	}
 
-	public int getUnidadesExistentes() {
-		return unidadesExistentes;
+	public int getUnidadProd() {
+		return unidadProd;
 	}
 
 	public double getPrecioUnidad() {
@@ -36,16 +36,16 @@ public class Product {
 		return numElementos = numElementos;
 	}
 
-	public void setNombreProd(String nombreProd) {
-		this.nombreProd = nombreProd;
+	public static String setNombreProd(String nombreProd) {
+		return nombreProd = nombreProd;
 	}
 
-	public void setUnidadesExistentes(int unidadesExistentes) {
-		this.unidadesExistentes = unidadesExistentes;
+	public static int setUnidadProd(int unidadesExistentes) {
+		return unidadesExistentes = unidadesExistentes;
 	}
 
-	public void setPrecioUnidad(double precioUnidad) {
-		this.precioUnidad = precioUnidad;
+	public static double setPrecioUnidad(double precioUnidad) {
+		return precioUnidad = precioUnidad;
 	}
 	
 	public String toString() {
@@ -53,9 +53,17 @@ public class Product {
 		
 		prod1 = " Número Producto: " + getNumElementos() +
 				"\n Nombre Producto: " + getNombreProd() +
-				"\n Unidades Existente: " + getUnidadesExistentes() + 
+				"\n Unidades Existente: " + getUnidadProd() + 
 				"\n Precio Unidad: " + getPrecioUnidad();
 		
 		return prod1;
+	}
+	
+	public static double getValorProducto(int unidadProd, double precioUnidad) {
+		int unidadProd1 = unidadProd;
+		double precioUnidad1 = precioUnidad;
+		double valor = unidadProd1 * precioUnidad1;
+		
+		return valor;
 	}
 }

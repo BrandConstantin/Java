@@ -10,11 +10,24 @@ public class Practice_01 {
 		boolean numCoincide = true;
 		int num = 0;
 		
+		/*System.out.println("Introduce un número: ");
+		num = r.nextInt();*/
+		
 		do {
-			for(int i = 0; i < 10; i++) {						
-				if(num == 1 || num == 2 || num == 3 || num == 4
-						|| num == 5 || num == 6 || num ==7) {
-					
+			if(num == 1 || num == 2 || num == 3 || num == 4
+					|| num == 5 || num == 6 || num ==7) {
+				
+				numCoincide = true;				
+			}else {
+				numCoincide = false;
+				
+				//System.out.println("Número no coincidente con la BD del Morse!");
+				
+				do {
+					System.out.println("Introduce un número: ");
+					num = r.nextInt();
+										
+					numCoincide = true;
 					switch(num) {
 						case 1: 
 							System.out.println("D");
@@ -38,12 +51,8 @@ public class Practice_01 {
 							System.out.println("R");
 							break;
 					}
-				}else {
-					System.out.println("Introduce un número: ");
-					num = r.nextInt();
-				}
-
-			}		
-		}while(!numCoincide);
+				}while(totalNum <= 10);	
+			}
+		}while(numCoincide);
 	}
 }
