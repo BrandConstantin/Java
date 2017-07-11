@@ -1,5 +1,5 @@
 /*
- * Decir si la fecha introducida es correcta o no
+ * Decir si la fecha introducida es correcta o no y pasar a fecha siguiente
  */
 package tema04;
 
@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author BrandConstantin
  */
-public class FechaExistente_oNO {
+public class Fecha_Siguiente {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         
@@ -64,8 +64,39 @@ public class FechaExistente_oNO {
             }
         }
         
+        //pasar a fecha siguiente        
+        if(dia < 31){
+            //comprobar mes
+            if(mes == 2){
+                if(dia == 30 && mes == 2){
+                    mes = 3;
+                    dia = 1;
+                }else if(dia == 29 && mes == 2){
+                    mes = 3;
+                    dia = 0;
+                }else{
+                    dia = 28;
+                }
+            }
+            
+            dia += 1;
+        }else if(dia >= 31){
+            if(dia == 31 && mes == 2){
+                dia = 2;
+            }
+            
+            dia += 1;
+            mes++;
+            
+            if(mes >=12){
+                dia = 1;
+                mes = 1;
+                anio++;
+            }
+        }
+        
         System.out.println("___________________________________________________");
-        System.out.println("La fecha introducida es: ");
-        System.out.print(dia + "/" + mes + "/" + anio + "\n");
+        System.out.println("La fecha siguiente es: ");
+        System.out.print(dia + "/" + mes + "/" + anio + "\n");        
     }
 }
