@@ -29,35 +29,28 @@ public class Caracter_Z {
         if (altura > 4) {           
             for(i = 0; i < altura; i++){
                 //la parte superior
-                while (posicion < altura) {
-                    System.out.print (caracter);
-                    posicion++;
-                }
+                System.out.print (caracter);
             }
              
             System.out.println("");
             
-            for(i = altura; i > 0; i--){
-                //los espacios en blanco
-                for (int k = 0; k < altura; k++) {
-                    while(posicion < 0){
-                        System.out.print(caracter);
+            //los espacios en blanco
+            for (i = 1; i <= (altura / 2 + 1); i++) {
+                for (j = i; j <= 10; j++) {
+                    if(j == altura){
+                        System.out.println(caracter);
+                    }else{
+                        System.out.print(" ");
                     }
-                    
-                    posicion--;
                 }
-                System.out.println("@");
-            }
+                System.out.println(" ");
+            }   
             
-            /*for(i = 0; i < altura; i++){
-                //la barra diagonal
-               while (posicion == altura - i) {
-                   System.out.print (caracter);
-                    posicion++;
-                }
-                //System.out.println ();
-                //posicion = 0;
-            }*/
+            //la ultima linea
+            for(i = 0; i < altura; i++){
+                //la parte superior
+                System.out.print (caracter);
+            }
        }else{
             System.out.println("Introduce una altura superior a 4");
         }
