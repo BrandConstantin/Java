@@ -19,7 +19,7 @@ public class Adivinar_Num_PC {
         int numAleatorio;
         int oportunidades = 5;
         int mayor = 100;
-        int menor = 1;
+        int menor = 0;
         boolean encontrado = false;
         String respuesta = "";
 
@@ -29,36 +29,35 @@ public class Adivinar_Num_PC {
         System.out.println("------------------------------------------------------");
 
         do {
-            numAleatorio = (int) (Math.random() * (mayor - menor)) + 1;
+            numAleatorio = (int) (Math.random() * (mayor - menor)) + menor;
             System.out.println("Es el numero adivinado " + numAleatorio + " ?");
             respuesta = teclado.next().toUpperCase();
 
             oportunidades--;
 
-            if (oportunidades > 0) {
-                System.out.println("----");
-                System.out.println("Me quedan " + oportunidades);
-
-                if ((respuesta.equals("SI"))) {
-                    encontrado = true;
-                    oportunidades = 0;
-                } else {
+            if ((respuesta.equals("SI"))) {
+                encontrado = true;
+                oportunidades = 0;
+            } else {
+                if (oportunidades > 0) {
+                    System.out.println("----");
+                    System.out.println("Me quedan " + oportunidades);
                     System.out.println("Es un numero mayor o menor?");
                     respuesta = teclado.next().toLowerCase();
 
                     if (respuesta.equals("mayor")) {
-                        mayor = numAleatorio;
-                        numAleatorio = (int) ((Math.random() * (mayor - menor)) + mayor);
+                        menor = numAleatorio;
+                        //numAleatorio = (int) ((Math.random() * (mayor - menor)) + mayor);
                     } else if (respuesta.equals("menor")) {
-                        menor = mayor;
-                        numAleatorio = (int) ((Math.random() * (mayor - menor)) + menor);
+                        mayor = numAleatorio + 1;
+                        //numAleatorio = (int) ((Math.random() * (mayor - menor)) + (menor + 1));
                     } else {
                         System.out.println("Escribe solo 'mayor' o 'menor' ");
                         System.out.println("Has perdido una oportunidad");
                     }
+                }else {
+                    System.out.println("No tengo más oportunidades");
                 }
-            } else {
-                System.out.println("No tengo más oportunidades");
             }
         } while ((oportunidades > 0) && encontrado == false);
 
