@@ -1,16 +1,18 @@
 /*
- * 
- * Añade un dígito a un número por detrás
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package tema8;
+package exercise;
 
 import java.util.Scanner;
 
 /**
  *
- * @author BrinCo
+ * @author brand
  */
-public class Ejercicio11_pegaDigitoDetras {
+public class Ex11_add_digitoUltimo {
+
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
@@ -22,8 +24,7 @@ public class Ejercicio11_pegaDigitoDetras {
 
         System.out.println("-------------------------------------------------------");
 
+        System.out.println("El nuevo número es:" + functions.Functions2.pegaPorDetras(numIntrod, digitos));
 
-        System.out.println("El nuevo número es:" + funciones.VariasMate.pegaPorDetras(numIntrod, digitos));
-
-  }
+    }
 }

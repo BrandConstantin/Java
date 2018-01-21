@@ -1,16 +1,17 @@
 /*
- * 
- * Escribe un programa que pase de decimal a binario
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package tema8;
+package exercise;
 
 import java.util.Scanner;
 
 /**
  *
- * @author BrinCo
+ * @author brand
  */
-public class Ejercicio18_deDecimal_aBinario {
+public class Ex18_transform_DecimalBinario {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         
@@ -20,7 +21,7 @@ public class Ejercicio18_deDecimal_aBinario {
 
         System.out.println("-------------------------------------------------------");
 
-        System.out.println("El número decimal es " + funciones.VariasMate.decimal_Binario(num));
+        System.out.println("El número decimal es " + functions.Functions2.decimal_Binario(num));
 
-  }
+  }    
 }

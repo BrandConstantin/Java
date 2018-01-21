@@ -1,11 +1,17 @@
 /*
- * Cuenta el número de dígitos de un número entero.
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
+package exercise;
 
-package tema8;
 import java.util.Scanner;
 
-public class Ejercicio05_contarDigitos {
+/**
+ *
+ * @author brand
+ */
+public class Ex05_contarDigitos {
   public static void main(String[] args) {   
 
     Scanner tecla = new Scanner(System.in);
@@ -16,7 +22,7 @@ public class Ejercicio05_contarDigitos {
     System.out.println("Escribe un numero y te digo de cuantos digitos esta formado");
     int num = tecla.nextInt();
         
-    System.out.println("El numero tiene " + funciones.VariasMate.digitos(num) + " digitos");
+    System.out.println("El numero tiene " + functions.Functions2.digitos(num) + " digitos");
 
-  }
+  }    
 }
