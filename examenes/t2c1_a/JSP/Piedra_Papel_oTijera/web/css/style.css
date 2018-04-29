@@ -1,0 +1,37 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13-jun-2016, 9:55:54
+    Author     : BinCo
+*/
+
+.head{
+  text-align: center;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+h1{
+  font-family: fantasy;
+  font-style: bold;
+  color: activecaption
+}
+
+h3{
+  font-family: fantasy;
+  font-style: bold;
+  color: activecaption
+}
+
+p{
+  font-family: sans-serif;
+  color: activecaption
+}
+
+.boton{
+  color: aqua;
+}

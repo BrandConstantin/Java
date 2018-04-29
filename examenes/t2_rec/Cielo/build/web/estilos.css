@@ -1,0 +1,26 @@
+  h1{
+    text-style: underline ;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    }
+  h3{
+    color: black;
+    text-align: center;
+    }
+  body{
+    background-color: blue;
+  }
+  table tr td {
+      border: solid 1px white;
+      text-align: center;
+      width: 200px;
+      height: 100px;
+  }
+  table{
+      margin: 0 auto;
+  }
+  div{
+      text-align: center;
+      margin: 0px auto;
+  }

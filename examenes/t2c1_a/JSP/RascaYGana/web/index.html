@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+Crea el juego “Rasca y gana”. En pantalla aparecerá un “rasca” con un número oculto y se le
+preguntará al usuario qué número del 1 al 6 cree que saldrá. A continuación se desvelará el número (el
+programa debe elegirlo de forma aleatoria). Si el usuario acierta, se llevará como regalo un teléfono
+móvil; por el contrario, si no acierta, se llevará un euro de chocolate ¡siempre hay premio!
+-->
+<html>
+  <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>RASCA y GANA</title>
+        <meta name="author" content="constantin">
+        <link rel="icon" type="image/png" href="images/rasca.jpg">
+        <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="head"><h1>Participa!! Siempre se ganan premios!</h1>
+        <form method="post" action="resuldado.jsp">
+        <img src="images/rasca.jpg" alt="rasca"/>
+        <h3>Qué número crees que saldrá?</h3>
+        <p>(solo de 1 a 6)</p>
+        <label for="numero">Tu número</label>
+        <input id="numero" name="numero" type="number" min="1" max="6" step="1" placeholder="Número" autofocus required>
+        <p class="boton"><input type="submit" value="ENVIAR"/></p>
+        </form>
+    </div>
+  </body>
+</html>

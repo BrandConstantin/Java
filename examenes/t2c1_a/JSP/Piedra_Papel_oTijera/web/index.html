@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+Implementa el famoso juego piedra, papel o tijera. El jugador debe elegir mediante una lista
+desplegable o un botón de selección (radio-button) una de las tres opciones. A continuación, el
+ordenador elegirá una opción al azar y por último se mostrarán las imágenes elegidas tanto por el
+jugador como por el ordenador y se dirá quién ha sido el ganador, tal y como se indica a continuación.
+Hay que tener en cuenta que la piedra le gana a la tijera, el papel le gana a la piedra y la tijera le gana
+al papel.
+-->
+<html>
+  <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>PIEDRA PAPEL TIJERA</title>
+        <meta name="author" content="constantin">
+        <link rel="icon" type="image/png" href="imagenes/tijera.jpg">
+        <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="head"><h1>PIEDRA -- PAPEL -- TIJERA</h1>
+        <form method="post" action="resultado.jsp">
+            <h2>Piedra, papel o tijera ??</h2>
+            <label for="foto-1"><img src="imagenes/foto-1.png" width="100" alt="piedra"/></label><input value="1" id="foto-1" name="foto" type="radio" required>
+            <br>
+            <label for="foto-2"><img src="imagenes/foto-2.png" width="100" alt="papel"/></label><input value="2" id="foto-2" name="foto" type="radio" required>
+            <br>
+            <label for="foto-3"><img src="imagenes/foto-3.png" width="100" alt="tijera"/></label><input value="3" id="foto-3" name="foto" type="radio" required>
+            <p class="boton"><input type="submit" value="ENVIAR"/></p>
+        </form>
+    </div>
+  </body>
+</html>

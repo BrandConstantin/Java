@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+Un fabricante de cocinas nos ha pedido hacer un configurador. El usuario podrá elegir el acabado:
+madera, naranja o verde lima; así como el tipo de asa que pondrá a los muebles: larga o corta. El
+usuario también podrá marcar una casilla (por ej. un checkbox, una lista desplegable o un radio-
+button) en la que indicará si quiere comprar también los electrodomésticos. Según los datos
+introducidos, el programa mostrará la imagen de la cocina (en la imagen siempre salen los
+electrodomésticos aunque no se hayan pedido) y el precio bien desglosado. Los muebles de madera
+cuestan 9000 euros, los muebles con acabado naranja o verde lima cuestan 8000 y los
+electrodomésticos cuestan 4500 euros (recuerda que el usuario puede elegir si quiere o no quiere
+electrodomésticos). Al precio de la cocina hay que sumarle el 21% de IVA.
+-->
+<html>
+  <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>FABRICANTE COCINA</title>
+        <meta name="author" content="constantin">
+        <link rel="stylesheet" href="css/css.css">
+  </head>
+  <body>
+    <div>
+      <h1 style="text-align:center">CONFIGURADOR DE COCINA</h1>
+            <form action="formulario.jsp" method="post" validate>
+              <p> Elige el acabado de la cocina</p>
+                <br>
+                <select name="acabado">
+                    <option value="none" disabled selected>Escoge un tipo de ACABADO...</option>
+                    <option value="madera">MADERA</option>
+                    <option value="naranja">NARANJA</option>
+                    <option value="verde">VERDE LIMA</option>
+                </select>
+                <br>
+                <br>
+                <p>Elige el tipo de asa</p>
+                <br>
+                <br>
+                <select name="asa">
+                    <option value="none" disabled selected>Escoge un tipo de ASA...</option>
+                    <option value="larga">LARGA</option>
+                    <option value="corta">CORTA</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <select name="electro">
+                    <option value="none" disabled selected>Quieres ELECTRODOMESTICOS...</option>
+                    <option value="comprar">SI, COMPRAR</option>
+                    <option value="nocomprar">NO, NO COMPRAR</option>
+                </select>
+                <br>
+                <br>
+                <input type="submit" name="ok" value="Configurar">
+                <br>
+                <br>
+            </form>
+    </div>
+  </body>
+</html>
