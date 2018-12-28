@@ -11,5 +11,14 @@ public class Main {
 		myCar.changePaintColor(Color.RED);
 		
 		System.out.println(myCar.paintColor);
+		
+		//using call by value
+		double myCarSpeed = 55;
+		myCar.speedingUp(myCarSpeed);
+		System.out.println(myCarSpeed);
+		
+		//using call by reference
+		myCarSpeed = myCar.speedingDown(myCarSpeed);
+		System.out.println(myCarSpeed);
 	}
 }

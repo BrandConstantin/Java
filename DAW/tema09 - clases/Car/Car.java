@@ -17,4 +17,16 @@ public class Car {
 	public void changePaintColor(Color newPaintColor) {
 		this.paintColor = newPaintColor;
 	}
+	
+	//using call by value
+	public void speedingUp(double currentSpeed) {
+		currentSpeed += 100;			
+	}
+	
+	//using call by reference
+	public double speedingDown(double currentSpeed) {
+		currentSpeed -= 20;	
+		
+		return currentSpeed;
+	}
 }
