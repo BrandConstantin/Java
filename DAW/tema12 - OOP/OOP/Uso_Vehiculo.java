@@ -2,7 +2,7 @@ package oop;
 
 import javax.swing.*;
 
-public class Uso_Coche {
+public class Uso_Vehiculo {
 	public static void main(String[] args) {
 		Coche Renault = new Coche();		
 		
@@ -22,5 +22,13 @@ public class Uso_Coche {
 		
 		System.out.println(Renault.datos_generales());
 		System.out.println("El precio total del coche es de " + Renault.precioTotal());
+		
+		
+		System.out.println("------------------------------------------------");
+		
+		Furgoneta miFurgo1 = new Furgoneta(300, 3);
+		miFurgo1.setColor("blanco");
+		System.out.println(miFurgo1.datos_generales());
+		System.out.println(miFurgo1.getDatosFurgo());
 	}
 }

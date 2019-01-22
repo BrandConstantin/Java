@@ -16,6 +16,19 @@ public class Empleado {
 		altaContrato = calendario.getTime();
 	}
 	
+	public Empleado(String nombre, double sueldo) {
+		this.nombre = nombre;
+		this.sueldo = sueldo;
+	}	
+	
+	// sobre carga de constructores
+	public Empleado(String nombre) {
+		//this.nombre = nombre;
+		//para crear un objeto con valores por defecto
+		//si no se le introducen en el constructor todos los valores
+		this(nombre, 45000, 2000, 01, 01);
+	}
+	
 	private String nombre;
 	private double sueldo;
 	private int agno;
