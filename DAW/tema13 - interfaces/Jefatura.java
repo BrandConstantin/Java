@@ -1,6 +1,6 @@
-package oop;
+package interfaces;
 
-public final class Jefatura extends Empleado{ // con la palabra final delante ya no se pueden crear subclases para Jefatura
+public class Jefatura extends Empleado implements Jefes{ // con la palabra final delante ya no se pueden crear subclases para Jefatura
 	public Jefatura(String nombre, double sueldo, int agno, int mes, int dia) {
 		super(nombre, sueldo, agno, mes, dia);
 	}
@@ -22,5 +22,13 @@ public final class Jefatura extends Empleado{ // con la palabra final delante ya
 	
 	private double incentivo;
 	
+	public String tomarDecisiones(String decision) {
+		return " tomó la decisión de " + decision;
+	}
+	
+	public double estableceBonus(double gratificacion) {
+		double prima = 2000;
+		return Trabajadores.bonusBase + gratificacion + prima;
+	}
 	
 }

@@ -1,4 +1,6 @@
-package oop;
+package interfaces;
+
+import java.util.Arrays;
 
 public class Uso_Empleado {
 
@@ -42,11 +44,30 @@ public class Uso_Empleado {
 		Jefatura jefa_Finanzas = (Jefatura) misEmpleados[4];
 		jefa_Finanzas.setIncentivo(2000);
 		
+		/*
+		//principio de sustitución
+		Empleado director_comercial = new Jefatura("Sandra Sabates", 56000, 2012, 10, 21);
+		
+		//instanciamos un objeto de tipo interfaz perteneciente a la clase empleado
+		Comparable ejemplo = new Empleado("Jesús Maria");
+		
+		if(director_comercial instanceof Empleado) {
+			System.out.println("Es de tipo Jefatura");
+		}
+		if(ejemplo instanceof Comparable) {
+			System.out.println("Implementa la interfaz comparable");
+		}
+		*/
+		
 		for (Empleado empleado : misEmpleados) {			
 			System.out.println(empleado.getNombre() + " \tSueldo: " + empleado.getSueldo());
 		}
 		
 		System.out.println("Subir sueldo -> #########");
+		System.out.println("Jefa de Finanzas " + jefa_Finanzas.tomarDecisiones("dar 1 día más de vacaciones de navidad"));
+		
+		//implementar interfaz compareTo
+		Arrays.sort(misEmpleados);
 		
 		for (Empleado empleado : misEmpleados) {	
 			empleado.subeSueldo(4);
@@ -54,6 +75,9 @@ public class Uso_Empleado {
 		}
 		
 		System.out.println("-----------------------------------------------------");
+		
+		System.out.println("Jefe " + jefa_Finanzas.getNombre() + " tiene un bonus de " + jefa_Finanzas.estableceBonus(500));
+		System.out.println("Empleado " + empleado1.getNombre() + " tiene un bonus de " + empleado1.estableceBonus(500));
 	}
 
 }

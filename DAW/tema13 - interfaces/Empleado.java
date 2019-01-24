@@ -1,8 +1,8 @@
-package oop;
+package interfaces;
 
 import java.util.*;
 
-public class Empleado {
+public class Empleado implements Comparable, Trabajadores{
 	
 	public Empleado(String nombre, double sueldo, int agno, int mes, int dia) {
 		super();
@@ -59,5 +59,24 @@ public class Empleado {
 		double aumento = sueldo * porcentaje / 100;
 		
 		sueldo += aumento;
+	}
+	
+	// crear el método compareTo
+	public int compareTo(Object miObjecto) {
+		Empleado otroEmpleado = (Empleado) miObjecto;
+		
+		if(this.sueldo < otroEmpleado.sueldo) {
+			return -1;
+		}
+		
+		if(this.sueldo > otroEmpleado.sueldo) {
+			return 1;
+		}
+		
+		return 0;
+	}
+	
+	public double estableceBonus(double gratificacion) {
+		return Trabajadores.bonusBase + gratificacion;
 	}
 }
