@@ -60,17 +60,20 @@ class MarcoServidor extends JFrame implements Runnable {
 		int countO = 0;
 
 		try {
-			ServerSocket eSocket = new ServerSocket(PUERTO, 50);
+			ServerSocket sServidor = new ServerSocket(PUERTO);
 			System.out.println("Iniciando el servidor!");
 
 			while (true) {
-				Socket sCliente = eSocket.accept();
+				//limita el server.
+				sServidor.setReceiveBufferSize(1);
+				Socket sCliente = sServidor.accept();
 
-				//flujo entrada es lo que recibe del cliente
+				//lectura y envio de datos
 				DataInputStream flujo_entrada = new DataInputStream(sCliente.getInputStream());
 				String mensaje = flujo_entrada.readUTF();
+				DataOutputStream flujoOut = new DataOutputStream(sCliente.getOutputStream());
 
-//				DataOutputStream flujo_salida = new DataOutputStream(sCliente.getOutputStream());	
+//				DataOutputStream flujo_salida = new DataOutputStream(sServidor.getOutputStream());	
 				if (mensaje.length() < 1) {
 //					System.out.println(mensaje.length());
 					System.err.println("Error en comando: no se reconoce");
@@ -95,7 +98,9 @@ class MarcoServidor extends JFrame implements Runnable {
 						countE = 0;
 						countO = 0;
 					} else {
-//					flujo_salida.writeUTF("Hola mundo desde el servidor");					
+						flujoOut.writeUTF("Conexión finalizada");
+						flujoOut.close();
+						flujo_entrada.close();
 						sCliente.close();
 						System.out.println("Cliente desconectado");
 						areatexto.append("\nPrograma finalizado");

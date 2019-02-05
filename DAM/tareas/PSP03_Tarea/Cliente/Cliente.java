@@ -72,8 +72,8 @@ class LaminaMarcoCliente extends JPanel {
 			try {
 				Socket sCliente = new Socket(HOST, PUERTO);
 
-//				InputStream aux2 = sCliente.getInputStream();
-//				DataInputStream flujo_entrada = new DataInputStream(aux2);
+				InputStream aux2 = sCliente.getInputStream();
+				DataInputStream flujo_entrada = new DataInputStream(aux2);
 				OutputStream aux = sCliente.getOutputStream();
 				DataOutputStream flujo_salida = new DataOutputStream(aux);
 				String campo = campo1.getText().toUpperCase();
@@ -82,6 +82,8 @@ class LaminaMarcoCliente extends JPanel {
 				if (campo.equals("END")) {
 					flujo_salida.writeUTF("END");
 					flujo_salida.close();
+					flujo_entrada.close();
+					sCliente.close();
 				} else {
 					flujo_salida.writeUTF(campo);
 				}

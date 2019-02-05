@@ -62,3 +62,20 @@ public class Conteo {
 	}
 
 }
+
+/*
+    public static void accLetters(String lineKb){
+        // Paso a list la cadena casteanloda a char.
+        List<Character> list = lineKb.chars().mapToObj(e ->(char)e)
+                                                .collect(Collectors.toList());
+        //cuento los caracteres filtrandolos.
+        int cantA=(int)list.parallelStream().filter(a -> a.equals('a')).count();
+        int cantE=(int)list.parallelStream().filter(e -> e.equals('e')).count();
+        int cantO=(int)list.parallelStream().filter(o -> o.equals('o')).count();
+        
+        //Imprimo la cadena con su frecuencia.
+        list.parallelStream().forEachOrdered(System.out::print);
+        System.out.printf(" %d %d %d%n", cantA, cantE, cantO);
+        
+    }//close function. 
+*/

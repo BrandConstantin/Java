@@ -65,3 +65,19 @@ public class Array {
 	}
 
 }
+
+/*
+    public static String creaCad(){
+        StringBuilder texto= new StringBuilder();
+        //String con el abecedario.
+        final String LETRAS = "abcdefghijklmnñopqrstuvwxyz";
+        //Instancia para generar números aleatorios.
+        SecureRandom rnd = new SecureRandom ();
+        //bucle que itera hasta crear unas cadena de 10 letras.
+        do{
+            texto.append(LETRAS.charAt(rnd.nextInt(LETRAS.length())));
+        }while(texto.length() < 10);
+
+        return texto.toString(); 
+    }//close function.
+ */
