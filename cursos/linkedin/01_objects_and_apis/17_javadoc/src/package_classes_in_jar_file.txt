@@ -1,0 +1,5 @@
+1. File >> Project Structure >> Artifacts >> + >> JAR >> From modules with dependencies ...
+2. Main Class >> Browse >> Project >> src >> Main class >> Ok >> Ok
+3. Se crea el directorio META-INF
+4. Build >> Buid Artifact >> nombreArchivo.jar >> Build
+5. Para comprobar que se ha creado en el directorio out >> artifacts >> nombreProyecto_jar >> nombreFichero.jar
