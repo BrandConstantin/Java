@@ -1,0 +1,2 @@
+1. Descargar json.jar de http://repo1.maven.org/maven2/org/json/json
+2. Ir a File >> Project Structure >> + >> java >> json.jar
