@@ -1,0 +1,6 @@
+1. descargar javax.json-1.0.4.jar
+2. click derecha sobre la carpeta nueva construida llamada lib >> import
+	File System >> importamos el archivo descargado jar
+3. click derecha sobre el archivo jar >>  Build Path >> Add to Build Path >> se crea la carpeta Referenced Libraries
+
+4. se repiten los pasos 1-3 con jackson-jr-al-2.7.5.jar
