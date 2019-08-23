@@ -1,0 +1,13 @@
+c -> compress te content of this file
+v -> verbose output
+m -> add the contents of a text file to the manifest file
+f -> create a jar file
+
+Pasos: (o uno u otro)
+jar cvmf manifest.txt test.jar *
+jar cvfm test.jar manifest.txt *
+
+Pasos con Eclipse:
+Run >> Run Configuration >> debe apuntar al main class >> en ClassPath debe apuntar a derby.jar 
+click derecha sobre proyecto >> export >> java >> runnable jar file >> lunch Configuration escoger nuestro fichero >> export destination >> 
+    package required libraries generated jar >> finish
