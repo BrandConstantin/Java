@@ -1,0 +1,2 @@
+1. Download jFugue from http://www.jfugue.org
+2. File >> Project Structure >> + >> java >> select jfugue.jar
