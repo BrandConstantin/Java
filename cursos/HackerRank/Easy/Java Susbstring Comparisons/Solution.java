@@ -9,16 +9,21 @@ public class Solution {
         // Complete the function
         // 'smallest' must be the lexicographically smallest substring of length 'k'
         // 'largest' must be the lexicographically largest substring of length 'k'
+        smallest = s.substring(0, k);  
+        largest = s.substring(0, k);        
+        String temp = "";
 
-        java.util.ArrayList<String> words = new java.util.ArrayList<>();
-        //for cada char.length
-        for(int i = 0; i <= s.length() - k; i++){
-            words.add(s.substring(i, i + k));
+        for(int i = 0 ; i < s.length() - k + 1 ; i++){
+            temp = s.substring(i, i + k);
+            if(smallest.compareTo(temp) > 0){
+               smallest = temp; 
+            } 
+            if(largest.compareTo(temp) < 0){
+                largest = temp;
+            } 
         }
-        //System.out.println(words);
-        smallest = words.get(0);
-        largest = words.get(words.size() - 1);
-        return largest + "\n" + smallest;
+
+        return smallest + "\n" + largest;
     }
 
 
